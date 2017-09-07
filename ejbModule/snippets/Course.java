@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 /**
  * The persistent class for the course database table.
- * 
+ * 最简单功能写成
  */
 @Entity
 @NamedQuery(name="Course.findAll", query="SELECT c FROM Course c")
