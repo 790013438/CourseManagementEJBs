@@ -1,4 +1,4 @@
-package snippets;
+package snippets.jpa;
 
 import java.io.Serializable;
 import javax.persistence.*;
