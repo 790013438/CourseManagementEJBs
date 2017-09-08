@@ -1,5 +1,6 @@
 package snippets.ejb;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.ejb.LocalBean;
@@ -47,8 +48,8 @@ public class CourseBean implements CourseBeanRemote {
             CourseDTO courseDTO = new CourseDTO();
             courseDTO.setId(courseEntity.getId());
             courseDTO.setName(courseEntity.getName());
-            courseDTO.setCredits(course.getCredits());
-            courses.add(course);
+            courseDTO.setCredits(courseDTO.getCredits());
+            courses.add(courseDTO);
         }
         return courses;
     }

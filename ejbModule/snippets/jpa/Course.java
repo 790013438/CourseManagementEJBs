@@ -11,51 +11,52 @@ import javax.persistence.*;
 @Entity
 @NamedQuery(name="Course.findAll", query="SELECT c FROM Course c")
 public class Course implements Serializable {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private int id;
 
-	private int credits;
+    private int credits;
 
-	private String name;
+    private String name;
 
-	private int teacher_id;
+    @Column(name="teacher_id")
+    private int teacherId;
 
-	public Course() {
-	}
+    public Course() {
+    }
 
-	public int getId() {
-		return this.id;
-	}
+    public int getId() {
+        return this.id;
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public int getCredits() {
-		return this.credits;
-	}
+    public int getCredits() {
+        return this.credits;
+    }
 
-	public void setCredits(int credits) {
-		this.credits = credits;
-	}
+    public void setCredits(int credits) {
+        this.credits = credits;
+    }
 
-	public String getName() {
-		return this.name;
-	}
+    public String getName() {
+        return this.name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public int getTeacher_id() {
-		return this.teacher_id;
-	}
+    public int getTeacherId() {
+        return this.teacherId;
+    }
 
-	public void setTeacher_id(int teacher_id) {
-		this.teacher_id = teacher_id;
-	}
+    public void setTeacherId(int teacherId) {
+        this.teacherId = teacherId;
+    }
 
 }
