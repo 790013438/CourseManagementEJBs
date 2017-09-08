@@ -48,7 +48,7 @@ public class CourseBean implements CourseBeanRemote {
             CourseDTO courseDTO = new CourseDTO();
             courseDTO.setId(courseEntity.getId());
             courseDTO.setName(courseEntity.getName());
-            courseDTO.setCredits(courseDTO.getCredits());
+            courseDTO.setCredits(courseEntity.getCredits());
             courses.add(courseDTO);
         }
         return courses;
